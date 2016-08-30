@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="himanshugoel.com.imagescrolling.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/imageScroller"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/lineIndicatorLayout" />
+
+    <himanshugoel.com.imagescrolling.LineIndicatorLayout
+        android:id="@+id/lineIndicatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
