@@ -49,11 +49,11 @@ public class CircleIndicatorLayout extends LinearLayout {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    public void setUpWithImageScroller(ViewPager viewPager) {
+    public void setUpWithViewPager(ViewPager viewPager) {
         circularViewList = new ArrayList<>();
         this.viewPager = viewPager;
         pageCount = viewPager.getAdapter().getCount();
-        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(pxToDp(100), pxToDp(100));
+        LayoutParams llp = new LayoutParams(pxToDp(100), pxToDp(100));
         llp.setMargins(0, 0, pxToDp(70), 0);
 
         for (int i = 0; i < pageCount; i++) {
@@ -155,7 +155,7 @@ public class CircleIndicatorLayout extends LinearLayout {
     }
 
     public void setIndicatorSize(int size) {
-        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(pxToDp(size), pxToDp(size));
+        LayoutParams llp = new LayoutParams(pxToDp(size), pxToDp(size));
         llp.setMargins(0, 0, pxToDp(70), 0);
         for (int i = 0; i < circularViewList.size(); i++) {
             circularViewList.get(i).setLayoutParams(llp);

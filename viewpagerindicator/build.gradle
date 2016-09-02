@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'ViewPagerIndicator'
+
+    publishedGroupId = 'com.himanshugoel.viewpagerindicator'
+    libraryName = 'ViewPagerIndicator'
+    artifact = 'viewpagerindicator'
+
+    libraryDescription = 'Indicators that are compatible with ViewPager'
+
+    siteUrl = 'https://github.com/thehimanshugoel/ViewPagerIndicator'
+    gitUrl = 'https://github.com/thehimanshugoel/ViewPagerIndicator.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'thehimanshugoel'
+    developerName = 'Himanshu Goel'
+    developerEmail = 'thehimanshugoel@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
@@ -23,3 +47,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
